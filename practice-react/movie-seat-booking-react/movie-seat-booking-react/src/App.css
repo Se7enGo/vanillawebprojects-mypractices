@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #242333;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  min-width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.picker {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.picker > span {
+  padding: 5px 10px;
+}
+.picker > select {
+  width: 200px;
+  padding-inline: 20px;
+  border-radius: 5px;
+  appearance: none;
+}
+
+.example {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #201f2e;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  font-size: 0.8em;
+  width: 290px;
+}
+.ex-column {
+  display: flex;
+  color: #777777;
+  padding: 5px 0;
+  margin-right: 14px;
+}
+.btn {
+  width: 1.2em;
+  height: 1em;
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+  position: relative;
+  top: 50%;
+  transform: translateY(25%);
+  margin-right: 0.6em;
+}
+
+.screen {
+  width: 50%;
+  height: 70px;
+  background-color: white;
+  margin: 15px 0;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  transform: perspective(3em) rotateX(358deg);
+}
+
+.chairs {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  width: 80%;
+  flex: 1;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.chairRow {
+  width: 65%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 6px;
+  font-size: 0.8em;
+}
+.left,
+.middle,
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chairRow span {
+  flex: 1;
+  cursor: pointer;
+  background-color: #444451;
+  display: block;
 }
 
-.App-link {
-  color: #61dafb;
+.tickets,
+.money {
+  color: #6feaf6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+span.empty {
+  background-color: #444451;
+}
+span.selected {
+  background-color: #6feaf6;
+}
+span.occupied {
+  background-color: #ffffff;
 }
